@@ -66,7 +66,7 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="min-h-screen bg-white">
       <div className={"w-full max-w-md mx-auto py-10 px-4"}>
         <div className="bg-[#FAF8F5] border border-[#EBE5DA] rounded-2xl shadow-sm p-6 sm:p-8 relative overflow-hidden">
           {/* Soft paper texture background accent */}
