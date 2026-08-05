@@ -34,7 +34,7 @@ export default function SignUpPage() {
     return true;
   };
 
-  const { handleSubmit, register } = useForm();
+  const { handleSubmit, register } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     if (!data.fullName && !data.email && !data.password) {
