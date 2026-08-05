@@ -256,9 +256,16 @@ export default function App() {
     setIsBookModalOpen(true);
   };
 
-  const handleLogout = () => {
-    dispatch(clearUser());
-    showToast("Signed out of session");
+  const handleLogout = async () => {
+    try {
+      await post("/api/auth/logout", {}, {});
+    } catch (error) {
+      console.error(error);
+    } finally {
+      dispatch(clearUser());
+      showToast("Signed out of session");
+      router.push("/login");
+    }
   };
 
   return (
