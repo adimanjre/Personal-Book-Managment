@@ -7,6 +7,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import toast from "react-hot-toast";
 import { post } from "@/lib/api";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useAppDispatch } from "@/store/hooks";
 import { setUser } from "@/store/userSlice";
 
@@ -140,6 +141,16 @@ export default function LoginPage() {
               />
             </div>
           </FormWrapper>
+
+          <p className="text-center text-xs text-[#8C8275] mt-6 relative z-10">
+            Don&apos;t have an account?{" "}
+            <Link
+              href="/signup"
+              className="text-[#2D2A26] font-semibold hover:underline"
+            >
+              Sign up
+            </Link>
+          </p>
         </div>
       </div>
     </div>

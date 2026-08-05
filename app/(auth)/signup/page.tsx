@@ -15,6 +15,7 @@ import toast from "react-hot-toast";
 import FormWrapper from "@/components/ui/FormWrapper";
 import Button from "@/components/ui/Button";
 import { post } from "@/lib/api";
+import Link from "next/link";
 
 type Inputs = {
   fullName: string;
@@ -159,6 +160,16 @@ export default function SignUpPage() {
               />
             </div>
           </FormWrapper>
+
+          <p className="text-center text-xs text-[#8C8275] mt-6 relative z-10">
+            Already have an account?{" "}
+            <Link
+              href="/login"
+              className="text-[#2D2A26] font-semibold hover:underline"
+            >
+              Log in
+            </Link>
+          </p>
         </div>
       </div>
     </div>
